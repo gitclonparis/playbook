@@ -1,0 +1,9 @@
+--- # Yum Module Example
+- hosts: all
+  user: deploy 
+  sudo: yes
+  connection: ssh
+  gather_facts: no
+  tasks:
+  - name: Equivalent of YUM UPGRADE
+    action: yum name=* state=latest

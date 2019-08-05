@@ -1,0 +1,13 @@
+[admin]
+admin
+
+[centos7]
+clientc7
+
+[centos6]
+clientc6
+
+[centos]
+admin
+clientc7
+clientc6

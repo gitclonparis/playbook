@@ -1,0 +1,8 @@
+--- # yum
+- hosts: all 
+  sudo: yes
+  user: deploy 
+  connection: ssh
+  tasks:
+  - name: Install a package
+    yum: pkg=lynx state=latest
