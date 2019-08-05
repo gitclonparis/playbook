@@ -1,0 +1,11 @@
+--- # GROUP USER MODULE EXAMPLE
+- hosts: all
+  user: deploy
+  sudo: yes
+  connection: ssh
+  gather_facts: no
+  tasks:
+  - name: Add a new group called newgroup
+    group: name=nagiosagent gid=2201 state=present
+  - name: Add the user called tstapache to the apache web client
+    user: name=nagiosagent uid=2201 shell=/bin/bash group=nagiosagent state=present
