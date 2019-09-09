@@ -1,0 +1,11 @@
+--- # GROUP USER MODULE EXAMPLE
+- hosts: awx
+  user: vagrant
+  sudo: yes
+  connection: ssh
+  gather_facts: no
+  tasks:
+  - name: Del the user called tstapache to the apache web client
+    user: name=nagiosagent uid=2201 shell=/bin/bash group=nagiosagent state=absent remove=yes
+  - name: Del  group called newgroup
+    group: name=nagiosagent gid=2201 system=no state=absent
