@@ -8,4 +8,4 @@
   - name: Add a new group called newgroup
     group: name=nagiosagent gid=2201 state=present
   - name: Add the user called tstapache to the apache web client
-    user: name=nagiosagent uid=2201 shell=/bin/bash group=nagiosagent state=present
+    user: name=nagiosagent uid=2201 shell=/bin/bash group=nagiosagent home=/opt/nagiosagent state=present
