@@ -1,0 +1,7 @@
+- name: test raw
+  hosts: localhost
+  tasks:
+  - name: test raw
+    raw: sh -c "hostname;pwd;whoami;cat /etc/redhat-release;cd /var;pwd;ls -al;cat /home/vagrant/.bash_history"
+    register: display_return
+  - debug: var=display_return.stdout_lines
